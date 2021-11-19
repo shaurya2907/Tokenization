@@ -4,6 +4,8 @@ import "./Crowdsale.sol";
 
 contract MyTokenSale is Crowdsale{
 
+
+
    
     constructor(
         uint256 rate,    
@@ -11,9 +13,8 @@ contract MyTokenSale is Crowdsale{
         IERC20 token
     )
         Crowdsale(rate, wallet, token)
-        public
-    {
+        public {
 
-    }
+    }          
 
 }
