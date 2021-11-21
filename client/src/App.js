@@ -95,7 +95,7 @@ alert("KYC for "+this.state.kycAddress+" is completed");
 
 <p>If you want ot but tokens, send Wei to this address : {this.state.tokenSaleAddress}</p>   
 
-<p>You currently have:{this.state.userTokens} CAPPU tokens</p>
+<p>You currently have:{this.state.userTokens} METRO tokens</p>
 
    </div>
     );
