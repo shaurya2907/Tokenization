@@ -10,6 +10,7 @@ class App extends Component {
   state = { loaded:false  ,kycAddress: "0x123...", tokenSaleAddress: null, userTokens:0};
 
   componentDidMount = async () => {
+    
     try {
       // Get network provider and web3 instance.
       this.web3 = await getWeb3();
@@ -56,8 +57,8 @@ class App extends Component {
     this.tokenInstance.events.Transfer({to: this.accounts[0]}).on("data",this.updateUserTokens);
   };
 
-  handleBuyTokens= async() =>{
-    await this.tokenSaleInstance.methods.buyTokens(this.accounts[0]).send({from:this.accounts[0], value: this.web3.utils.toWei("1","wei")} );
+  handleBuyToken= async() =>{
+    await this.tokenSaleInstance.methods.buyTokens(this.accounts[0]).send({from: this.accounts[0], value: 1});
   };
   
   handleInputChange = (event) =>{
@@ -83,7 +84,7 @@ alert("KYC for "+this.state.kycAddress+" is completed");
     }
     return (
       <div className="App">
-        <h1>StarDucks Cappucino Token Sales</h1>
+        <h1>Metro Tokens</h1>
         <p>Get your Tokens today!</p>
         <h2>kyc Whitelisting</h2>
         Address to allow :<input type="text" name="kycAddress" value={this.state.kycAddress} onChange ={ this.handleInputChange}  
@@ -95,7 +96,7 @@ alert("KYC for "+this.state.kycAddress+" is completed");
 <p>If you want ot but tokens, send Wei to this address : {this.state.tokenSaleAddress}</p>   
 
 <p>You currently have:{this.state.userTokens} CAPPU tokens</p>
-<button type="button" onCick={this.handleBuyTokens}>Buy more tokens</button>
+
    </div>
     );
   }

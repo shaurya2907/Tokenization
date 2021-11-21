@@ -69,7 +69,8 @@
       "name": "buyTokens",
       "outputs": [],
       "stateMutability": "payable",
-      "type": "function"
+      "type": "function",
+      "payable": true
     },
     {
       "inputs": [],
@@ -82,7 +83,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [],
@@ -95,7 +97,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [],
@@ -108,7 +111,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [],
@@ -121,11 +125,13 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "stateMutability": "payable",
-      "type": "receive"
+      "type": "receive",
+      "payable": true
     }
   ],
   "metadata": "{\"compiler\":{\"version\":\"0.8.0+commit.c7dfd78e\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"rate\",\"type\":\"uint256\"},{\"internalType\":\"address payable\",\"name\":\"wallet\",\"type\":\"address\"},{\"internalType\":\"contract IERC20\",\"name\":\"token\",\"type\":\"address\"},{\"internalType\":\"contract KycContract\",\"name\":\"_kyc\",\"type\":\"address\"}],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"purchaser\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"beneficiary\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"value\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"TokensPurchased\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"beneficiary\",\"type\":\"address\"}],\"name\":\"buyTokens\",\"outputs\":[],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"rate\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"token\",\"outputs\":[{\"internalType\":\"contract IERC20\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"wallet\",\"outputs\":[{\"internalType\":\"address payable\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"weiRaised\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"stateMutability\":\"payable\",\"type\":\"receive\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"buyTokens(address)\":{\"details\":\"low level token purchase ***DO NOT OVERRIDE*** This function has a non-reentrancy guard, so it shouldn't be called by another `nonReentrant` function.\",\"params\":{\"beneficiary\":\"Recipient of the token purchase\"}},\"rate()\":{\"returns\":{\"_0\":\"the number of token units a buyer gets per wei.\"}},\"token()\":{\"returns\":{\"_0\":\"the token being sold.\"}},\"wallet()\":{\"returns\":{\"_0\":\"the address where funds are collected.\"}},\"weiRaised()\":{\"returns\":{\"_0\":\"the amount of wei raised.\"}}},\"version\":1},\"userdoc\":{\"events\":{\"TokensPurchased(address,address,uint256,uint256)\":{\"notice\":\"Event for token purchase logging\"}},\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/MyTokenSale.sol\":\"MyTokenSale\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"@openzeppelin/contracts/access/Ownable.sol\":{\"keccak256\":\"0x3e902f5d88635a8ca279a86687159dab7169aa5f1ba13bbdb5815258c121d230\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://961ad050366736ecb2f9c79870003a35827bdd2975684fcc639904c619f2f69f\",\"dweb:/ipfs/QmZ3sxZ3VskEG14ZU5fkA4TkzzZuTaqoWKV1GSi9X9c47F\"]},\"@openzeppelin/contracts/security/ReentrancyGuard.sol\":{\"keccak256\":\"0x1fb0467c275f0693f30322495f7af0b843aa95a65c94de022270b2ac203d2a62\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://987b834a023ff5fb54e1474faec69a5895bd24f9efd845ceeeda9e08020d1564\",\"dweb:/ipfs/QmV4znY78UAweA8YU4qW5Lez8nqJdFaVC34nQxPFxutHiQ\"]},\"@openzeppelin/contracts/token/ERC20/IERC20.sol\":{\"keccak256\":\"0x0b4055e336d769ed0cfbdabecfc5913b1ddfafe4eacf96707ba1cec7ecc70f82\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://4f51f014e2b8e2324d399d152831cd625ed443e8da5af6b73f29c19fc480cfd2\",\"dweb:/ipfs/QmUBHJdBT27nLiTnnMaBUcJNNneN9jZzxgs1NABiGBc9tC\"]},\"@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol\":{\"keccak256\":\"0xcd95506d50d467e96e7259c9143a1b197811eddf7e8a62edc9f692795376a603\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://cf44ecc239e34b05116b24cc9b79c5c1f6de84a1af5cfa82e3305fa7e997b1e5\",\"dweb:/ipfs/QmTbyxxxuGjWQmBGZryFxyJqdtrnSBT6yzmyd3RBdNcqr7\"]},\"@openzeppelin/contracts/utils/Address.sol\":{\"keccak256\":\"0x8a4004e5cf25dcc9e5c9c990a3ca619743b016fadfa0c59121196a55542e0f48\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://e9165c1d5936d534c06ae2a272a8e2c75fd49180426c284a650a3a1959c1884e\",\"dweb:/ipfs/QmbXX8Hu5D7ymt11rLR7jhW1qCw7q9AakFBziRG2jnyYTk\"]},\"@openzeppelin/contracts/utils/Context.sol\":{\"keccak256\":\"0x36b1d55112f794e6448085052eb4875e8673aca3d64f34a216c7dcd5e6dd521b\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://c08a164683c2b9039247e9addb633040090ee9a51e1bc4c3b348d9aed067311b\",\"dweb:/ipfs/QmbCsMifRPkrUCWEucEeLUboQAPCAXrPFLizD7tBzVrMuZ\"]},\"@openzeppelin/contracts/utils/math/SafeMath.sol\":{\"keccak256\":\"0x9cf5b21546a128c86c961b1c7697b6cdaf7a2d99557520636f8838cfb671793c\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://67ff3cf9fd04f06689e75d8841d0cc633e980d0c090726ebbc0031554e18efcf\",\"dweb:/ipfs/QmNxghKJhVfEn9mJtN9QaybFVL611JSdjg8pdYMJWvZskK\"]},\"project:/contracts/Crowdsale.sol\":{\"keccak256\":\"0xea0aa6e9c6b9a5893c8be1c0afb60649043340d44023a9a41197d63bc6e6d3f4\",\"urls\":[\"bzz-raw://3e2267bcca4e8aead6e8873ded9a792633db1eeee42b47a086d7c85a72a3753a\",\"dweb:/ipfs/QmRmhAHg9h8mTpioe21hb66nbwdouRWk1ACHb4SHsyL9T5\"]},\"project:/contracts/KycContract.sol\":{\"keccak256\":\"0x24d852f3f25b207f57860ae877a1eb8ca4d7cc4c7b228eca978dc1efce0f2721\",\"urls\":[\"bzz-raw://e7f37296642204f83fcd193373388c62030ea74ca137a04c23bfa7f399256c74\",\"dweb:/ipfs/QmbBgVtnvMd5F6qG1WjNp3cSBBEBUNf26srYbgvhKRqtkV\"]},\"project:/contracts/MyTokenSale.sol\":{\"keccak256\":\"0xa7a1c6bf006548ecef40b5293645d46910bc3a96ab818fe72b84557e4ab9d53a\",\"urls\":[\"bzz-raw://ae5a66c03f16f64350924de7906997563895854d6c5b0793ea67d6f983fd9153\",\"dweb:/ipfs/QmVuatA9yYEjnDnkWNPh6uBw2JHBKbkE8e5yv9DsoX8PUa\"]}},\"version\":1}",
@@ -10104,6 +10110,12 @@
     "version": "0.8.0+commit.c7dfd78e.Emscripten.clang"
   },
   "networks": {
+    "3": {
+      "events": {},
+      "links": {},
+      "address": "0x0B30Bdce47ac74ab2B6289ec495660B487FbD52f",
+      "transactionHash": "0xbb51cdcba3956f2c7972ce9f8fd94c84fe4ebb2ffab5df071d50bdb98b23cbb0"
+    },
     "5777": {
       "events": {},
       "links": {},
@@ -10112,7 +10124,8 @@
     }
   },
   "schemaVersion": "3.4.3",
-  "updatedAt": "2021-11-21T09:28:15.274Z",
+  "updatedAt": "2021-11-21T10:56:58.269Z",
+  "networkType": "ethereum",
   "devdoc": {
     "kind": "dev",
     "methods": {

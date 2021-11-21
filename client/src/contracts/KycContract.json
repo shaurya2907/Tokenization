@@ -31,7 +31,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [],
@@ -96,7 +97,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     }
   ],
   "metadata": "{\"compiler\":{\"version\":\"0.8.0+commit.c7dfd78e\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"previousOwner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"OwnershipTransferred\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_addr\",\"type\":\"address\"}],\"name\":\"KycCompleted\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"owner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"renounceOwnership\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_addr\",\"type\":\"address\"}],\"name\":\"setKycCompleted\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_addr\",\"type\":\"address\"}],\"name\":\"setKycRevoked\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"transferOwnership\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"owner()\":{\"details\":\"Returns the address of the current owner.\"},\"renounceOwnership()\":{\"details\":\"Leaves the contract without owner. It will not be possible to call `onlyOwner` functions anymore. Can only be called by the current owner. NOTE: Renouncing ownership will leave the contract without an owner, thereby removing any functionality that is only available to the owner.\"},\"transferOwnership(address)\":{\"details\":\"Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner.\"}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/KycContract.sol\":\"KycContract\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"@openzeppelin/contracts/access/Ownable.sol\":{\"keccak256\":\"0x3e902f5d88635a8ca279a86687159dab7169aa5f1ba13bbdb5815258c121d230\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://961ad050366736ecb2f9c79870003a35827bdd2975684fcc639904c619f2f69f\",\"dweb:/ipfs/QmZ3sxZ3VskEG14ZU5fkA4TkzzZuTaqoWKV1GSi9X9c47F\"]},\"@openzeppelin/contracts/utils/Context.sol\":{\"keccak256\":\"0x36b1d55112f794e6448085052eb4875e8673aca3d64f34a216c7dcd5e6dd521b\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://c08a164683c2b9039247e9addb633040090ee9a51e1bc4c3b348d9aed067311b\",\"dweb:/ipfs/QmbCsMifRPkrUCWEucEeLUboQAPCAXrPFLizD7tBzVrMuZ\"]},\"project:/contracts/KycContract.sol\":{\"keccak256\":\"0x24d852f3f25b207f57860ae877a1eb8ca4d7cc4c7b228eca978dc1efce0f2721\",\"urls\":[\"bzz-raw://e7f37296642204f83fcd193373388c62030ea74ca137a04c23bfa7f399256c74\",\"dweb:/ipfs/QmbBgVtnvMd5F6qG1WjNp3cSBBEBUNf26srYbgvhKRqtkV\"]}},\"version\":1}",
@@ -2813,6 +2815,12 @@
     "version": "0.8.0+commit.c7dfd78e.Emscripten.clang"
   },
   "networks": {
+    "3": {
+      "events": {},
+      "links": {},
+      "address": "0x31d390496289901bEF536029866ECA52C2a25d7c",
+      "transactionHash": "0x45b7d210af3ad5e559aabed2afacea7922572f9afa880dfb9219bccac0406460"
+    },
     "5777": {
       "events": {
         "0x8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0": {
@@ -2841,7 +2849,8 @@
     }
   },
   "schemaVersion": "3.4.3",
-  "updatedAt": "2021-11-21T09:28:15.248Z",
+  "updatedAt": "2021-11-21T10:56:58.278Z",
+  "networkType": "ethereum",
   "devdoc": {
     "kind": "dev",
     "methods": {
