@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/Tokenization/static/css/main.b100e6da.chunk.css",
+    "main.js": "/Tokenization/static/js/main.3c627223.chunk.js",
+    "main.js.map": "/Tokenization/static/js/main.3c627223.chunk.js.map",
+    "runtime-main.js": "/Tokenization/static/js/runtime-main.66578acf.js",
+    "runtime-main.js.map": "/Tokenization/static/js/runtime-main.66578acf.js.map",
+    "static/js/2.372e5d54.chunk.js": "/Tokenization/static/js/2.372e5d54.chunk.js",
+    "static/js/2.372e5d54.chunk.js.map": "/Tokenization/static/js/2.372e5d54.chunk.js.map",
+    "index.html": "/Tokenization/index.html",
+    "precache-manifest.d2cbcbe17de1338ff21dd6debc05be74.js": "/Tokenization/precache-manifest.d2cbcbe17de1338ff21dd6debc05be74.js",
+    "service-worker.js": "/Tokenization/service-worker.js",
+    "static/css/main.b100e6da.chunk.css.map": "/Tokenization/static/css/main.b100e6da.chunk.css.map"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.66578acf.js",
+    "static/js/2.372e5d54.chunk.js",
+    "static/css/main.b100e6da.chunk.css",
+    "static/js/main.3c627223.chunk.js"
+  ]
+}
